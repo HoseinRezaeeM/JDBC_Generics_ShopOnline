@@ -1,14 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="00ffef4e-391c-4ff0-9732-ce158f7a96a0" name="Changes" comment="" />
+    <list default="true" id="00ffef4e-391c-4ff0-9732-ce158f7a96a0" name="Changes" comment="Add postgresql and lombok dependency">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/ApplicationOopJdbcGenerics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/domain/BaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/repository/BaseEntityRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/repository/impl/BaseEntityRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/service/BaseEntityService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/service/impl/BaseEntityServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/domain/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/repository/impl/UserRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/util/ApplicationContex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/util/ApplicationProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/util/DataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/table.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2W82jCMPUyPC4TbCrpSnKUTxFy6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -20,7 +57,13 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -31,8 +74,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1696100020839</updated>
+      <workItem from="1696100023092" duration="363000" />
+      <workItem from="1696100438375" duration="1938000" />
     </task>
+    <task id="LOCAL-00001" summary="Add postgresql and lombok dependency">
+      <created>1696100199787</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1696100199787</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add postgresql and lombok dependency">
+      <created>1696100234048</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1696100234048</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -44,5 +107,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add postgresql and lombok dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add postgresql and lombok dependency" />
   </component>
 </project>
