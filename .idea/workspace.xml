@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00ffef4e-391c-4ff0-9732-ce158f7a96a0" name="Changes" comment="Create BaseEntity generics class and write type parameter id">
+    <list default="true" id="00ffef4e-391c-4ff0-9732-ce158f7a96a0" name="Changes" comment="Create User class">
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/ApplicationOopJdbcGenerics.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/domain/ShoppingCart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/domain/User.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/domain/enumeration/ElectricApplianceType.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/domain/enumeration/ShoesType.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/menu/BaseMenu.java" afterDir="false" />
@@ -20,11 +19,7 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/service/UserService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/service/impl/ShoppingCartServiceImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/util/Validation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/table.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f856b20c-009a-42c6-bffe-1d921a812eb2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f856b20c-009a-42c6-bffe-1d921a812eb2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f856b20c-009a-42c6-bffe-1d921a812eb2/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f856b20c-009a-42c6-bffe-1d921a812eb2/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/repository/BaseEntityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/repository/BaseEntityRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/repository/impl/BaseEntityRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/repository/impl/BaseEntityRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/service/BaseEntityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/service/BaseEntityService.java" afterDir="false" />
@@ -45,10 +40,38 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master2" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1696269554" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master2" />
+                    <option name="lastUsedInstant" value="1696269461" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -59,20 +82,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -86,7 +108,7 @@
       <workItem from="1696150815717" duration="23066000" />
       <workItem from="1696233862436" duration="13045000" />
       <workItem from="1696246927428" duration="13000" />
-      <workItem from="1696258886855" duration="8193000" />
+      <workItem from="1696258886855" duration="8581000" />
     </task>
     <task id="LOCAL-00001" summary="Add postgresql and lombok dependency">
       <created>1696100199787</created>
@@ -137,7 +159,28 @@
       <option name="project" value="LOCAL" />
       <updated>1696183168985</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Create validation write validation password,email,mobilenumber">
+      <created>1696269414308</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1696269414308</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Create table">
+      <created>1696269490288</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1696269490288</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Create User class">
+      <created>1696269532197</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1696269532197</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +191,34 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="master" />
+                </option>
+              </RecentGroup>
+            </list>
           </value>
         </entry>
       </map>
@@ -161,7 +231,10 @@
     <MESSAGE value="Create DataSourse and write connection fild" />
     <MESSAGE value="Create ApplicationProperties and write Connetion to database" />
     <MESSAGE value="Create BaseEntity generics class and write type parameter id" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create BaseEntity generics class and write type parameter id" />
+    <MESSAGE value="Create validation write validation password,email,mobilenumber" />
+    <MESSAGE value="Create table" />
+    <MESSAGE value="Create User class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create User class" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
