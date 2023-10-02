@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.41">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <IntrospectionStateNumber>2023</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2048</IntrospectionStateNumber>
       <ServerVersion>14.7</ServerVersion>
       <StartupTime>1694857876</StartupTime>
       <TimeZones>true ACDT
@@ -815,7 +815,7 @@ false Zulu
 13388||10|C|G
 13388||-9223372036854775808|U|G
 13388||10|U|G</Grants>
-      <IntrospectionStateNumber>2023</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2048</IntrospectionStateNumber>
       <ObjectId>13754</ObjectId>
       <Relations>sequence|table|25033|25034|1
 sequence|table|25039|25040|1
@@ -825,8 +825,8 @@ sequence|table|25069|25070|1
 sequence|table|41746|41747|1
 sequence|table|41752|41753|1
 sequence|table|41758|41759|1
-sequence|table|41895|41896|1
-sequence|table|41913|41914|1
+sequence|table|41925|41926|1
+sequence|table|41954|41955|1
 </Relations>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4264,7 +4264,7 @@ sequence|table|41913|41914|1
     <schema id="267" parent="5" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>2023</IntrospectionStateNumber>
+      <IntrospectionStateNumber>2048</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>527</StateNumber>
       <OwnerName>postgres</OwnerName>
@@ -4276,25 +4276,25 @@ sequence|table|41913|41914|1
     </schema>
     <sequence id="269" parent="267" name="shoppingcart_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>41913</ObjectId>
-      <StateNumber>2022</StateNumber>
+      <ObjectId>41954</ObjectId>
+      <StateNumber>2047</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <sequence id="270" parent="267" name="users_id_seq">
       <DataType>integer|0s</DataType>
-      <ObjectId>41895</ObjectId>
-      <StateNumber>1993</StateNumber>
+      <ObjectId>41925</ObjectId>
+      <StateNumber>2031</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
     <table id="271" parent="267" name="shoppingcart">
-      <ObjectId>41914</ObjectId>
-      <StateNumber>2022</StateNumber>
+      <ObjectId>41955</ObjectId>
+      <StateNumber>2047</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
     <table id="272" parent="267" name="users">
-      <ObjectId>41896</ObjectId>
-      <StateNumber>1994</StateNumber>
+      <ObjectId>41926</ObjectId>
+      <StateNumber>2032</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
@@ -4303,104 +4303,80 @@ sequence|table|41913|41914|1
       <DefaultExpression>nextval(&apos;shoppingcart_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>2022</StateNumber>
+      <StateNumber>2047</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="274" parent="271" name="productname">
       <DataType>varchar(50)|0s</DataType>
       <Position>2</Position>
-      <StateNumber>2022</StateNumber>
+      <StateNumber>2047</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="275" parent="271" name="price">
       <DataType>integer|0s</DataType>
       <Position>3</Position>
-      <StateNumber>2022</StateNumber>
+      <StateNumber>2047</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <foreign-key id="276" parent="271" name="id_fk">
-      <ColNames>id</ColNames>
-      <ObjectId>41920</ObjectId>
-      <RefColNames>id</RefColNames>
-      <RefColPositions>1</RefColPositions>
-      <StateNumber>2022</StateNumber>
-      <RefTableId>41896</RefTableId>
-      <RefTableName>users</RefTableName>
-      <RefTableKind>table</RefTableKind>
-    </foreign-key>
-    <index id="277" parent="271" name="id_pk">
-      <ColNames>id</ColNames>
-      <ObjectId>41918</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>2022</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-    </index>
-    <key id="278" parent="271" name="id_pk">
-      <ObjectId>41919</ObjectId>
-      <Primary>1</Primary>
-      <StateNumber>2022</StateNumber>
-      <UnderlyingIndexId>41918</UnderlyingIndexId>
-    </key>
-    <column id="279" parent="272" name="id">
+    <column id="276" parent="272" name="id">
       <DataType>integer|0s</DataType>
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>1993</StateNumber>
+      <StateNumber>2031</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="280" parent="272" name="firstname">
+    <column id="277" parent="272" name="firstname">
       <DataType>varchar(50)|0s</DataType>
       <Position>2</Position>
-      <StateNumber>1993</StateNumber>
+      <StateNumber>2031</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="281" parent="272" name="lastname">
+    <column id="278" parent="272" name="lastname">
       <DataType>varchar(50)|0s</DataType>
       <Position>3</Position>
-      <StateNumber>1993</StateNumber>
+      <StateNumber>2031</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="282" parent="272" name="username">
+    <column id="279" parent="272" name="username">
       <DataType>varchar(50)|0s</DataType>
       <Position>4</Position>
-      <StateNumber>1993</StateNumber>
+      <StateNumber>2031</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="283" parent="272" name="password">
+    <column id="280" parent="272" name="password">
       <DataType>varchar(50)|0s</DataType>
       <Position>5</Position>
-      <StateNumber>1993</StateNumber>
+      <StateNumber>2031</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="284" parent="272" name="email">
+    <column id="281" parent="272" name="email">
       <DataType>varchar(50)|0s</DataType>
       <Position>6</Position>
-      <StateNumber>1993</StateNumber>
+      <StateNumber>2031</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="285" parent="272" name="mobilenaumber">
+    <column id="282" parent="272" name="mobilenumber">
       <DataType>varchar(50)|0s</DataType>
       <Position>7</Position>
-      <StateNumber>1993</StateNumber>
+      <StateNumber>2031</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="286" parent="272" name="users_pkey">
+    <index id="283" parent="272" name="users_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>41900</ObjectId>
+      <ObjectId>41930</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1993</StateNumber>
+      <StateNumber>2031</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="287" parent="272" name="users_pkey">
+    <key id="284" parent="272" name="users_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>41901</ObjectId>
+      <ObjectId>41931</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>1993</StateNumber>
-      <UnderlyingIndexId>41900</UnderlyingIndexId>
+      <StateNumber>2031</StateNumber>
+      <UnderlyingIndexId>41930</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

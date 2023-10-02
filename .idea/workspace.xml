@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00ffef4e-391c-4ff0-9732-ce158f7a96a0" name="Changes" comment="Create base package and create class">
+    <list default="true" id="00ffef4e-391c-4ff0-9732-ce158f7a96a0" name="Changes" comment="Create BaseEntity generics class and write type parameter id">
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/ApplicationOopJdbcGenerics.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/domain/ShoppingCart.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/domain/User.java" afterDir="false" />
@@ -12,7 +12,6 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/domain/enumeration/ShoesType.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/menu/BaseMenu.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/menu/ShoppingMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/menu/UserMenu.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/repository/ShoppingCartRepository.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/repository/UserRepository.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/repository/impl/ShoppingCartRepositoryImpl.java" afterDir="false" />
@@ -21,16 +20,11 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/service/UserService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/service/impl/ShoppingCartServiceImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/util/ApplicationContex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/util/ApplicationProperties.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/util/DataSource.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/util/Validation.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/table.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f856b20c-009a-42c6-bffe-1d921a812eb2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f856b20c-009a-42c6-bffe-1d921a812eb2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f856b20c-009a-42c6-bffe-1d921a812eb2/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f856b20c-009a-42c6-bffe-1d921a812eb2/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/domain/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/domain/BaseEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/repository/BaseEntityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/repository/BaseEntityRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/repository/impl/BaseEntityRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/repository/impl/BaseEntityRepositoryImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/service/BaseEntityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/service/BaseEntityService.java" afterDir="false" />
@@ -65,20 +59,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -89,7 +83,10 @@
       <updated>1696100020839</updated>
       <workItem from="1696100023092" duration="363000" />
       <workItem from="1696100438375" duration="2113000" />
-      <workItem from="1696150815717" duration="21793000" />
+      <workItem from="1696150815717" duration="23066000" />
+      <workItem from="1696233862436" duration="13045000" />
+      <workItem from="1696246927428" duration="13000" />
+      <workItem from="1696258886855" duration="8193000" />
     </task>
     <task id="LOCAL-00001" summary="Add postgresql and lombok dependency">
       <created>1696100199787</created>
@@ -112,7 +109,35 @@
       <option name="project" value="LOCAL" />
       <updated>1696102470514</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Create ApplicationContex and create object">
+      <created>1696182816465</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1696182816465</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Create DataSourse and write connection fild">
+      <created>1696182879424</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696182879424</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Create ApplicationProperties and write Connetion to database">
+      <created>1696182963998</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1696182963998</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Create BaseEntity generics class and write type parameter id">
+      <created>1696183168985</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1696183168985</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +157,26 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add postgresql and lombok dependency" />
     <MESSAGE value="Create base package and create class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create base package and create class" />
+    <MESSAGE value="Create ApplicationContex and create object" />
+    <MESSAGE value="Create DataSourse and write connection fild" />
+    <MESSAGE value="Create ApplicationProperties and write Connetion to database" />
+    <MESSAGE value="Create BaseEntity generics class and write type parameter id" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create BaseEntity generics class and write type parameter id" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/menu/ShoppingMenu.java</url>
+          <line>19</line>
+          <properties class="ir.oopjdbcgeneric.menu.ShoppingMenu" method="login">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
