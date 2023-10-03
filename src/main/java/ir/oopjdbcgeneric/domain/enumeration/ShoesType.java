@@ -9,7 +9,8 @@ public enum ShoesType {
     sport("sport",200),
     formal("formal",150),
     boot("boot",250),
-    heels("heels",300);
+    heels("heels",300),
+    sandal("sandal",100);
 
     public void setName(String name) {
         this.name = name;

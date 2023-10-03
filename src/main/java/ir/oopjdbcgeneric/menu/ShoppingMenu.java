@@ -23,7 +23,7 @@ public class ShoppingMenu {
         System.out.println("Enter Password : ");
         String password = scanner.next();
         User user = userService.login(userName);
-        if (user != null && !user.getPassword().equals(password)) {
+        if (user == null || !user.getPassword().equals(password)) {
             System.out.println("you enter a username and password incorrect!!!");
         } else {
             boolean isBolean = true;
