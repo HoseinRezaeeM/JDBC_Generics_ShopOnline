@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS users
 
 CREATE TABLE IF NOT EXISTS shoppingCart
 (
-    id          serial,
+    id        serial,
     productName varchar(50),
     price       int
 

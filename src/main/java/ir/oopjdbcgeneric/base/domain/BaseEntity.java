@@ -13,4 +13,5 @@ public class BaseEntity<ID extends Serializable> {
 
     private ID id;
 
+
 }

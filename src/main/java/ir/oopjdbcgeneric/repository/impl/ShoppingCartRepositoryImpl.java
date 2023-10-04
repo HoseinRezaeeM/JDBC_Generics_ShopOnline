@@ -2,6 +2,7 @@ package ir.oopjdbcgeneric.repository.impl;
 
 import ir.oopjdbcgeneric.base.repository.impl.BaseEntityRepositoryImpl;
 import ir.oopjdbcgeneric.domain.ShoppingCart;
+import ir.oopjdbcgeneric.domain.User;
 import ir.oopjdbcgeneric.repository.ShoppingCartRepository;
 
 import java.sql.Connection;
@@ -24,6 +25,7 @@ public class ShoppingCartRepositoryImpl extends BaseEntityRepositoryImpl<Integer
     protected void fillParamForStatement(PreparedStatement preparedStatement, ShoppingCart<Integer> entity, boolean isCart) throws SQLException {
         preparedStatement.setString(1,entity.getProductName());
         preparedStatement.setDouble(2,entity.getPrice());
+
 
     }
 
@@ -54,7 +56,8 @@ public class ShoppingCartRepositoryImpl extends BaseEntityRepositoryImpl<Integer
 
     @Override
     public List<ShoppingCart> countAllList() throws SQLException {
-        String sql = "SELECT Count(id) as count ,productname ,price FROM shoppingcart GROUP BY productname, price";
+        String sql = "SELECT Count(id) as count ,productname ,price FROM shoppingcart  GROUP BY productname, price";
+
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
             ResultSet resultSet = preparedStatement.executeQuery();
             List<ShoppingCart> entities = new ArrayList<>();
@@ -70,6 +73,7 @@ public class ShoppingCartRepositoryImpl extends BaseEntityRepositoryImpl<Integer
         int count = resultSet.getInt("count");
         String productName = resultSet.getString("productname");
         double price = resultSet.getDouble("price");
+
         return new ShoppingCart<>(null, productName, price,count);
     }
 

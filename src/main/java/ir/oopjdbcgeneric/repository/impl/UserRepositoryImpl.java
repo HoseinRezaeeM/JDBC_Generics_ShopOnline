@@ -63,7 +63,8 @@ public class UserRepositoryImpl extends BaseEntityRepositoryImpl<Integer, User<I
                 resultSet.getString(4),
                 resultSet.getString(5),
                 resultSet.getString(6),
-                resultSet.getString(7));
+                resultSet.getString(7))
+                ;
         user.setId(resultSet.getInt(1));
         return user;
     }

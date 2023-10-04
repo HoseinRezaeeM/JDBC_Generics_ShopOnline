@@ -26,14 +26,19 @@ public class BaseMenu {
         System.out.println("2- Sign up");
         System.out.println("3- Exit\n");
         System.out.println("Enter your select:");
-        int select = scanner.nextInt();
-        scanner.nextLine();
-        switch (select) {
-            case 1 -> shoppingMenu.login();
-            case 2 -> signup();
-            case 3 -> System.out.println("exit");
-            default -> System.out.println("---Eror404---");
+        try {
+            int select = scanner.nextInt();
+            scanner.nextLine();
+            switch (select) {
+                case 1 -> shoppingMenu.login();
+                case 2 -> signup();
+                case 3 -> System.out.println("exit");
+                default -> System.out.println("---Eror404---");
+            }
+        }catch (Exception e){
+            System.out.println("!!!WRONG!!!");
         }
+
     }
 
     public void signup() throws SQLException {

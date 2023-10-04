@@ -3,12 +3,14 @@ package ir.oopjdbcgeneric.domain;
 import ir.oopjdbcgeneric.base.domain.BaseEntity;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.io.Serializable;
 
 @Getter
 @Setter
+
 @SuppressWarnings("unused")
 public class User<ID extends Serializable> extends BaseEntity<ID> {
 
@@ -20,6 +22,9 @@ public class User<ID extends Serializable> extends BaseEntity<ID> {
     private String mobileNumber;
 
 
+    public User(ID id) {
+        super(id);
+    }
 
     public User(ID id, String firstName, String lastName, String username, String password, String email, String mobileNumber) {
         super(id);

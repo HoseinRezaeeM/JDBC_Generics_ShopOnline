@@ -1,5 +1,6 @@
 package ir.oopjdbcgeneric.menu;
 
+import ir.oopjdbcgeneric.base.domain.BaseEntity;
 import ir.oopjdbcgeneric.domain.ShoppingCart;
 import ir.oopjdbcgeneric.domain.User;
 import ir.oopjdbcgeneric.domain.enumeration.ElectricApplianceType;
@@ -23,7 +24,7 @@ public class ShoppingMenu {
         System.out.println("Enter Password : ");
         String password = scanner.next();
         User user = userService.login(userName);
-        if (user == null || !user.getPassword().equals(password)) {
+        if (user== null || !user.getPassword().equals(password)) {
             System.out.println("you enter a username and password incorrect!!!");
         } else {
             boolean isBolean = true;
@@ -36,6 +37,7 @@ public class ShoppingMenu {
                 System.out.println("5. REMOVE product from ShoppingCart");
                 System.out.println("6. Exit \n");
                 System.out.println("Enter your select :");
+
                 int select = scanner.nextInt();
                 scanner.nextLine();
                 switch (select) {
@@ -95,10 +97,11 @@ public class ShoppingMenu {
                 System.out.println("Enter Product Name :");
                 String productName = scanner.next();
                 if (productName.equals("null")){
-                    break;
+                    System.out.println();
                 }else {
                 ElectricApplianceType type = ElectricApplianceType.valueOf(productName);
                 double price = type.getPrice();
+
                 ShoppingCart<Integer> shoppingCart = new ShoppingCart<>(null, productName, price);
                 shoppingCartService.Save(shoppingCart);}
             case 2:
@@ -110,6 +113,7 @@ public class ShoppingMenu {
                 }else {
                     ShoesType type1 = ShoesType.valueOf(productName1);
                     double price1 = type1.getPrice();
+
                     ShoppingCart<Integer> shoppingCartt = new ShoppingCart<>(null, productName1, price1);
                     shoppingCartService.Save(shoppingCartt);
                     break;
@@ -133,6 +137,7 @@ public class ShoppingMenu {
         System.out.println("Enter ID product:");
         int id = scanner.nextInt();
         shoppingCartService.delete(id);
+        System.out.println("REMOVE!!");
     }
 
 }
