@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00ffef4e-391c-4ff0-9732-ce158f7a96a0" name="Changes" comment="edit code">
+    <list default="true" id="00ffef4e-391c-4ff0-9732-ce158f7a96a0" name="Changes" comment="edit codde">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f856b20c-009a-42c6-bffe-1d921a812eb2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f856b20c-009a-42c6-bffe-1d921a812eb2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/f856b20c-009a-42c6-bffe-1d921a812eb2/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f856b20c-009a-42c6-bffe-1d921a812eb2/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/domain/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/base/domain/BaseEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/domain/ShoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/domain/ShoppingCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/domain/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/menu/BaseMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/menu/BaseMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/menu/ShoppingMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/menu/ShoppingMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/repository/ShoppingCartRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/repository/ShoppingCartRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/repository/impl/ShoppingCartRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/repository/impl/ShoppingCartRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/repository/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/repository/impl/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/service/impl/ShoppingCartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ir/oopjdbcgeneric/service/impl/ShoppingCartServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/table.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/table.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,23 +76,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "corretto-17",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;corretto-17&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -116,7 +115,10 @@
       <workItem from="1696334244148" duration="412000" />
       <workItem from="1696338720566" duration="10000" />
       <workItem from="1696343734676" duration="2063000" />
-      <workItem from="1696403453830" duration="11366000" />
+      <workItem from="1696403453830" duration="11601000" />
+      <workItem from="1696424867755" duration="7888000" />
+      <workItem from="1696440457255" duration="622000" />
+      <workItem from="1696448117926" duration="2379000" />
     </task>
     <task id="LOCAL-00001" summary="Add postgresql and lombok dependency">
       <created>1696100199787</created>
@@ -251,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696325741854</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="edit codde">
+      <created>1696415304899</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1696415304899</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +323,8 @@
     <MESSAGE value="Create ApplicationOopJdbcGenerics class write main and complie" />
     <MESSAGE value="xml" />
     <MESSAGE value="edit code" />
-    <option name="LAST_COMMIT_MESSAGE" value="edit code" />
+    <MESSAGE value="edit codde" />
+    <option name="LAST_COMMIT_MESSAGE" value="edit codde" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -2,7 +2,6 @@ package ir.oopjdbcgeneric.repository.impl;
 
 import ir.oopjdbcgeneric.base.repository.impl.BaseEntityRepositoryImpl;
 import ir.oopjdbcgeneric.domain.ShoppingCart;
-import ir.oopjdbcgeneric.domain.User;
 import ir.oopjdbcgeneric.repository.ShoppingCartRepository;
 
 import java.sql.Connection;
@@ -25,18 +24,19 @@ public class ShoppingCartRepositoryImpl extends BaseEntityRepositoryImpl<Integer
     protected void fillParamForStatement(PreparedStatement preparedStatement, ShoppingCart<Integer> entity, boolean isCart) throws SQLException {
         preparedStatement.setString(1,entity.getProductName());
         preparedStatement.setDouble(2,entity.getPrice());
+        preparedStatement.setInt(3,entity.getIdUser());
 
 
     }
 
     @Override
     protected String getCountOfQuestionMarkForParams() {
-        return "(?,?)";
+        return "(?,?,?)";
     }
 
     @Override
     protected String getColumnName() {
-        return "(productName,price)";
+        return "(productName,price,userid)";
     }
 
     @Override
@@ -55,10 +55,11 @@ public class ShoppingCartRepositoryImpl extends BaseEntityRepositoryImpl<Integer
     }
 
     @Override
-    public List<ShoppingCart> countAllList() throws SQLException {
-        String sql = "SELECT Count(id) as count ,productname ,price FROM shoppingcart  GROUP BY productname, price";
+    public List<ShoppingCart> countAllList(int userid) throws SQLException {
+        String sql = "SELECT Count(id) as count ,productname ,price,userid FROM shoppingcart WHERE userid = ? GROUP BY productname, price,userid";
 
         try (PreparedStatement preparedStatement = getConnection().prepareStatement(sql)) {
+            preparedStatement.setInt(1,userid);
             ResultSet resultSet = preparedStatement.executeQuery();
             List<ShoppingCart> entities = new ArrayList<>();
 
@@ -73,14 +74,15 @@ public class ShoppingCartRepositoryImpl extends BaseEntityRepositoryImpl<Integer
         int count = resultSet.getInt("count");
         String productName = resultSet.getString("productname");
         double price = resultSet.getDouble("price");
-
-        return new ShoppingCart<>(null, productName, price,count);
+        int userid=resultSet.getInt("userid");
+        return new ShoppingCart<>(null, productName, price,count,userid);
     }
 
     @Override
-    public int sumPriceList() throws SQLException {
-        String sql="SELECT SUM(price) FROM shoppingcart";
+    public int sumPriceList(int userid) throws SQLException {
+        String sql="SELECT SUM(price) FROM shoppingcart WHERE userid = ?";
         PreparedStatement preparedStatement = getConnection().prepareStatement(sql);
+        preparedStatement.setInt(1,userid);
        ResultSet resultset =preparedStatement.executeQuery();
        int result=0;
        while (resultset.next()){

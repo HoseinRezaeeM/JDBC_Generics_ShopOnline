@@ -11,9 +11,12 @@ CREATE TABLE IF NOT EXISTS users
 
 CREATE TABLE IF NOT EXISTS shoppingCart
 (
-    id        serial,
+    id        serial primary key ,
     productName varchar(50),
-    price       int
+    price       int,
+    userid int references users(id)
+
 
 
 );
+

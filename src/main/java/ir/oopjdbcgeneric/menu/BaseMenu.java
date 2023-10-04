@@ -36,7 +36,8 @@ public class BaseMenu {
                 default -> System.out.println("---Eror404---");
             }
         }catch (Exception e){
-            System.out.println("!!!WRONG!!!");
+//            System.out.println("!!!WRONG!!!");
+            e.printStackTrace();
         }
 
     }

@@ -27,6 +27,7 @@ public class ShoppingMenu {
         if (user== null || !user.getPassword().equals(password)) {
             System.out.println("you enter a username and password incorrect!!!");
         } else {
+
             boolean isBolean = true;
             while (isBolean) {
                 System.out.println("---------** ShoppingCart **-------\n");
@@ -86,10 +87,14 @@ public class ShoppingMenu {
     }
 
     public void saveShoppingCart() throws SQLException {
+        System.out.println("**** ShoppingCart ****");
+        System.out.println("Enter ID :");
+        int idUser =scanner.nextInt();
         System.out.println("1. ElectricAppliance");
         System.out.println("2. Shoes");
         System.out.println("Enter your Select :");
         int select = scanner.nextInt();
+
         scanner.nextLine();
         switch (select) {
             case 1:
@@ -102,7 +107,7 @@ public class ShoppingMenu {
                 ElectricApplianceType type = ElectricApplianceType.valueOf(productName);
                 double price = type.getPrice();
 
-                ShoppingCart<Integer> shoppingCart = new ShoppingCart<>(null, productName, price);
+                ShoppingCart<Integer> shoppingCart = new ShoppingCart<>(null, productName, price,idUser);
                 shoppingCartService.Save(shoppingCart);}
             case 2:
                 System.out.println("----Shoes---");
@@ -113,8 +118,7 @@ public class ShoppingMenu {
                 }else {
                     ShoesType type1 = ShoesType.valueOf(productName1);
                     double price1 = type1.getPrice();
-
-                    ShoppingCart<Integer> shoppingCartt = new ShoppingCart<>(null, productName1, price1);
+                    ShoppingCart<Integer> shoppingCartt = new ShoppingCart<>(null, productName1, price1,idUser);
                     shoppingCartService.Save(shoppingCartt);
                     break;
                 }

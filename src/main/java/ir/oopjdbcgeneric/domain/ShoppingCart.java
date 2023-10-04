@@ -11,25 +11,30 @@ import java.io.Serializable;
 @Getter
 @Setter
 
+
 public class ShoppingCart<ID extends Serializable> extends BaseEntity<ID> {
     private String productName;
     private double price;
-    private double count;
+    private int count;
+    private int idUser;
 
 
 
 
-    public ShoppingCart(ID id,String productName, double price, double count) {
+    public ShoppingCart(ID id,String productName, double price, int count, int idUser) {
         super(id);
         this.productName = productName;
         this.price = price;
         this.count = count;
+        this.idUser =idUser;
     }
 
-    public ShoppingCart(ID id, String productName, double price) {
+
+    public ShoppingCart(ID id, String productName, double price,int idUser) {
         super(id);
         this.productName = productName;
         this.price = price;
+        this.idUser = idUser;
 
     }
 
@@ -39,6 +44,7 @@ public class ShoppingCart<ID extends Serializable> extends BaseEntity<ID> {
     public String toString() {
         return "productName :  " + productName+
                 ",       price : " + price +
-                ",            count : " + count +"\n";
+                ",            count : " + count +
+                ",              ID : "+idUser+ "\n";
     }
 }

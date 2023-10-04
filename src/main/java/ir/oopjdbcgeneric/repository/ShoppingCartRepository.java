@@ -12,9 +12,9 @@ public interface ShoppingCartRepository extends BaseEntityRepository<Integer, Sh
 
     void delete(Integer id) throws SQLException;
 
-    List<ShoppingCart> countAllList() throws SQLException;
+    List<ShoppingCart> countAllList(int useid) throws SQLException;
 
-    int sumPriceList() throws SQLException;
+    int sumPriceList(int userid) throws SQLException;
 
 
 }
