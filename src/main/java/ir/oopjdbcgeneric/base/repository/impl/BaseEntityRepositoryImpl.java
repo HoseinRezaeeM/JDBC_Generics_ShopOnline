@@ -22,14 +22,14 @@ public abstract class BaseEntityRepositoryImpl<ID extends Serializable,TYPE exte
     public void Save(TYPE entity) throws SQLException {
         String sql ="INSERT INTO " + getTableName() + "  " + getColumnName() + " VALUES " +  getCountOfQuestionMarkForParams() ;
        try (PreparedStatement statement =connection.prepareStatement(sql)){
-           fillParamForStatement(statement, entity, false);
+           fillParamForStatement(statement, entity);
            statement.executeUpdate();
        }catch (Exception e){
            e.printStackTrace();
        }
     }
 
-    protected abstract void fillParamForStatement(PreparedStatement preparedStatement, TYPE entity, boolean isCart) throws SQLException;
+    protected abstract void fillParamForStatement(PreparedStatement preparedStatement, TYPE entity) throws SQLException;
 
     protected abstract String getCountOfQuestionMarkForParams();
 

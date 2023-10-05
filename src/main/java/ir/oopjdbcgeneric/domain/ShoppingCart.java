@@ -18,10 +18,11 @@ public class ShoppingCart<ID extends Serializable> extends BaseEntity<ID> {
     private int count;
     private int idUser;
 
+    public ShoppingCart(ID id) {
+        super(id);
+    }
 
-
-
-    public ShoppingCart(ID id,String productName, double price, int count, int idUser) {
+    public ShoppingCart(ID id, String productName, double price, int count, int idUser) {
         super(id);
         this.productName = productName;
         this.price = price;

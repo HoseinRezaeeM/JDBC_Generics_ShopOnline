@@ -21,7 +21,7 @@ public class ShoppingCartRepositoryImpl extends BaseEntityRepositoryImpl<Integer
     }
 
     @Override
-    protected void fillParamForStatement(PreparedStatement preparedStatement, ShoppingCart<Integer> entity, boolean isCart) throws SQLException {
+    protected void fillParamForStatement(PreparedStatement preparedStatement, ShoppingCart<Integer> entity) throws SQLException {
         preparedStatement.setString(1,entity.getProductName());
         preparedStatement.setDouble(2,entity.getPrice());
         preparedStatement.setInt(3,entity.getIdUser());

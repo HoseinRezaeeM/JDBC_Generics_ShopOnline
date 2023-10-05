@@ -18,7 +18,7 @@ public class UserRepositoryImpl extends BaseEntityRepositoryImpl<Integer, User<I
     }
 
     @Override
-    protected void fillParamForStatement(PreparedStatement preparedStatement, User<Integer> entity, boolean isCart) throws SQLException {
+    protected void fillParamForStatement(PreparedStatement preparedStatement, User<Integer> entity) throws SQLException {
         preparedStatement.setString(1, entity.getFirstName());
         preparedStatement.setString(2, entity.getLastName());
         preparedStatement.setString(3, entity.getUsername());
